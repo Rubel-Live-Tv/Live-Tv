@@ -1,187 +1,593 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
+
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mytv.unaux.com | ANDROID & Pc Live Tv Watch Free</title>
-    <script src="https://cdn.jsdelivr.net/clappr/latest/clappr.min.js"></script>
-    <link href="https://vjs.zencdn.net/7.16.0/video-js.css" rel="stylesheet">
-    <style>
-        /* Base styles */
-        body {
-            font-family: 'Roboto', sans-serif;
-            background-color: #f0f2f5;
-            margin: 0;
-            padding: 0;
-            color: #333;
-        }
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="refresh" content="7200">
+    <title>Home Online LIVE TV !</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="icon" href="favicon.png">
+    <!-- jQuery library -->
 
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
+    <link href="css/video-js.css" rel="stylesheet">
 
-        h1 {
-            text-align: center;
-            color: #007bff;
-            margin-bottom: 20px;
-            font-weight: 700;
-        }
+    <link href="css/style5e1f.css?v=2" rel="stylesheet">
 
-        .channels-container {
-            overflow-x: auto;
-            white-space: nowrap;
-            margin-bottom: 20px;
-            -webkit-overflow-scrolling: touch;
-        }
-
-        .channels {
-            display: inline-flex;
-            justify-content: center;
-        }
-
-        .channel {
-            margin: 0 10px;
-            text-align: center;
-            cursor: pointer;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            flex-shrink: 0;
-            border: 1px solid #ddd;
-            border-radius: 10px;
-            padding: 10px;
-            background-color: #fff;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        .channel img {
-            width: 120px;
-            height: 80px;
-            border-radius: 10px;
-            object-fit: cover;
-            margin-bottom: 5px;
-        }
-
-        .channel p {
-            font-size: 14px;
-            color: #555;
-            font-weight: 500;
-        }
-
-        .channel:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-        }
-
-        .player-container {
-            position: relative;
-            width: 100%;
-            padding-top: 56.25%;
-            margin-bottom: 20px;
-            border-radius: 10px;
-            overflow: hidden;
-        }
-
-        .player {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border-radius: 10px;
-        }
-          .telegram-cta {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #0088cc;
-            color: #fff;
-            padding: 15px 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            margin-bottom: 20px;
-            transition: background-color 0.3s ease;
-        }
-
-        .telegram-cta:hover {
-            background-color: #006699;
-        }
-
-        .telegram-cta a {
-            color: #fff;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 18px;
-        }
-
-        .telegram-cta a:hover {
-            text-decoration: underline;
-        }
-
-        @media only screen and (max-width: 600px) {
-            .container {
-                width: 90%;
+    <style class="clappr-style">
+        @media all and (min-width: 992px) {
+            body {
+                background: #000 url(common5e1f.jpg?v=2);
+                background-repeat: no-repeat;
+                background-size: cover !important;
+                background-attachment: fixed !important;
             }
-
-            .channel {
-                margin: 0 5px;
-                padding: 5px;
-            }
-
-            .channel img {
-                width: 100px;
-                height: 60px;
-            }
-
-            .channel p {
-                font-size: 12px;
-            }
+        }
+        @media all and (max-width: 992px) {
+            body {
+                background: #000 url(common5e1f.jpg?v=2);
+                background-repeat: repeat;
+                background-size: contain !important;
+                background-attachment: fixed !important;
+            }}
+        a{
+            color: #ffffff;
         }
     </style>
 </head>
 
-<body>
-<div class="container">
-        <div class="telegram-cta">
-            <a href="https://t.me/rubellivetv"><b>Join Our Telegram Channel</b></a>
+
+
+
+	
+
+
+
+<body id="body">
+
+<div class="container-fluid p-3">
+    <div class="row justify-content-center">
+
+        <div class="col-12 col-lg-8 mt-4">
+            <div class="embed-responsive embed-responsive-16by9">
+                <div id="player" class="embed-responsive-item">
+                  <iframe name="view" scrolling="no" src="play.php?stream=01" allowfullscreen></iframe>
+                </div>
+            </div>
+			<p>&nbsp; <a href="install.apk"> Android App !</a></p>
         </div>
-    <div class="container">
-        <h1>Live Player</h1>
-        <div class="player-container">
-            <div id="player" class="player"></div>
+
+        <div class="col-12 col-lg-4 mt-4" >
+<div class="channel-list mx-auto" style="-webkit-backdrop-filter: blur(8px);backdrop-filter: blur(8px);background-color: #6e6e6e29;border-radius: 10px;">
+                <ul class="nav nav-tabs nav-justified " style=" margin-bottom: 15px;">
+                                            <li class="nav-item">
+                            <a class="nav-link active"
+                               data-type="Sports">Sports</a>
+                        </li>
+                                                <li class="nav-item">
+                            <a class="nav-link "
+                               data-type="Bangla">Bangla</a>
+                                
+                        </li>
+                                                <li class="nav-item">
+                            <a class="nav-link "
+                               data-type="Kids">Kids</a>
+                        </li>
+                                                <li class="nav-item">
+                            <a class="nav-link "
+                               data-type="Hindi">Hindi</a>
+                        </li>
+                                                <li class="nav-item">
+                            <a class="nav-link "
+                               data-type="Others">Others</a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link "
+                               data-type="HD">HD</a>
+                        </li>
+                        
+                </ul>
+                <ul id="vidlink" class="thumbnail-slider flex-container">
+                    <div class="row">
+                                            <li class="Hindi" style="display: none;"><a id="myLink" onclick="view.location.href='play.php?stream=sonysp5-2'"
+                                                                    class='channel flex-item'
+                                                                   "><img
+
+                                        src="assets/images/9XM1664974682.png"
+                                        alt="9XM"></a></li>
+                                            <li class="Bangla" style="display: none;"><a id="myLink" onclick="view.location.href='play.php?stream=sonysp5-2'"
+                                                                    class='channel flex-item'
+                                                                   "><img
+
+                                        src="assets/images/Ananda%20TV1664823736.png"
+                                        alt="Ananda TV"></a></li>
+                                            <li class="Others" style="display: none;"><a id="myLink" onclick="view.location.href='play.php?stream=1909'"
+                                                                    class='channel flex-item'
+                                                                   "><img
+
+                                        src="assets/images/Animal%20Planet1664974986.png"
+                                        alt="Animal Planet"></a></li>
+                                            <li class="Bangla" style="display: none;"><a id="myLink" onclick="view.location.href='play.php?stream=1116'"
+                                                                    class='channel flex-item'
+                                                                   "><img
+
+                                        src="assets/images/Bangla%20TV1664824431.png"
+                                        alt="Bangla TV"></a></li>
+                                            <li class="Others" style="display: none;"><a id="myLink" onclick="view.location.href='play.php?stream=1806'"
+                                                                    class='channel flex-item'
+                                                                   "><img
+
+                                        src="assets/images/BBC%20Earth1664974852.png"
+                                        alt="BBC Earth"></a></li>
+                                            <li class="Others" style="display: none;"><a id="myLink" onclick="view.location.href='play.php?stream=1801'"
+                                                                    class='channel flex-item'
+                                                                   "><img
+
+                                        src="assets/images/BBC%20World1664975476.png"
+                                        alt="BBC World"></a></li>
+                                            <li class="Bangla" style="display: none;"><a id="myLink" onclick="view.location.href='play.php?stream=1129'"
+                                                                    class='channel flex-item'
+                                                                   "><img
+
+                                        src="assets/images/Bijoy1664824527.png"
+                                        alt="Bijoy"></a></li>
+                                            <li class="Bangla" style="display: none;"><a id="myLink" onclick="view.location.href='play.php?stream=1118'"
+                                                                    class='channel flex-item'
+                                                                   "><img
+
+                                        src="assets/images/Boishakhi1664824558.png"
+                                        alt="Boishakhi"></a></li>
+                                            <li class="Bangla" style="display: none;"><a id="myLink" onclick="view.location.href='play.php?stream=1119'"
+                                                                    class='channel flex-item'
+                                                                   "><img
+
+                                        src="assets/images/Channel%20241664824751.png"
+                                        alt="Channel 24"></a></li>
+                                            <li class="Bangla" style="display: none;"><a id="myLink" onclick="view.location.href='play.php?stream=1124'"
+                                                                    class='channel flex-item'
+                                                                   "><img
+
+                                        src="assets/images/Channel%2091664824936.png"
+                                        alt="Channel 9"></a></li>
+                                            <li class="Bangla" style="display: none;"><a id="myLink" onclick="view.location.href='play.php?stream=1120'"
+                                                                    class='channel flex-item'
+                                                                   "><img
+
+                                        src="assets/images/Channel%20i1664976520.png"
+                                        alt="Channel i"></a></li>
+                                            <li class="Kids" style="display: none;"><a id="myLink" onclick="view.location.href='play.php?stream=1301'"
+                                                                    class='channel flex-item'
+                                                                   "><img
+
+                                        src="assets/images/CN%20HD%20Plus1665399859.png"
+                                        alt="CN HD Plus"></a></li>
+                                            <li class="Bangla" style="display: none;"><a id="myLink" onclick="view.location.href='play.php?stream=1404'"
+                                                                    class='channel flex-item'
+                                                                   "><img
+
+                                        src="assets/images/Color%20Bangla%20Cinema1664976765.png"
+                                        alt="Color Bangla Cinema"></a></li>
+                                            <li class="Hindi" style="display: none;"><a id="myLink" onclick="view.location.href='play.php?stream=1612'"
+                                                                    class='channel flex-item'
+                                                                   "><img
+
+                                        src="assets/images/Color%20Cineplex1664974156.png"
+                                        alt="Color Cineplex"></a></li>
+                                            <li class="Bangla" style="display: none;"><a id="myLink" onclick="view.location.href='play.php?stream=1411'"
+                                                                    class='channel flex-item'
+                                                                   "><img
+
+                                        src="assets/images/Colors%20Bangla1664976841.png"
+                                        alt="Colors Bangla"></a></li>
+                                            <li class="Hindi" style="display: none;"><a id="myLink" onclick="view.location.href='play.php?stream=1707'"
+                                                                    class='channel flex-item'
+                                                                   "><img
+
+                                        src="assets/images/Colors%20TV%20HD1664974042.png"
+                                        alt="Colors TV HD"></a></li>
+                                            <li class="Bangla" style="display: none;"><a id="myLink" onclick="view.location.href='play.php?stream=1104'"
+                                                                    class='channel flex-item'
+                                                                   "><img
+
+                                        src="assets/images/DBC1664825292.png"
+                                        alt="DBC"></a></li>
+                                            <li class="Bangla" style="display: none;"><a id="myLink" onclick="view.location.href='play.php?stream=1121'"
+                                                                    class='channel flex-item'
+                                                                   "><img
+
+                                        src="assets/images/Desh%20Tv1664825354.png"
+                                        alt="Desh Tv"></a></li>
+                                            <li class="Others" style="display: none;"><a id="myLink" onclick="view.location.href='play.php?stream=1905'"
+                                                                    class='channel flex-item'
+                                                                   "><img
+
+                                        src="assets/images/Discovery1664975007.png"
+                                        alt="Discovery"></a></li>
+                                            <li class="Kids" style="display: none;"><a id="myLink" onclick="view.location.href='play.php?stream=1103'"
+                                                                    class='channel flex-item'
+                                                                   "><img
+
+                                        src="assets/images/Duronto1665400494.png"
+                                        alt="Duronto"></a></li>
+                                            <li class="Others" style="display: none;"><a id="myLink" onclick="view.location.href='play.php?stream=1805'"
+                                                                    class='channel flex-item'
+                                                                   "><img
+
+                                        src="assets/images/DW%20TV1664825583.png"
+                                        alt="DW TV"></a></li>
+                                            <li class="Sports" "><a id="myLink" onclick="view.location.href='play.php?stream=1102'"
+                                                                    class='channel flex-item'
+                                                                   "><img
+
+                                        src="assets/images/GTV%2031670253750.png"
+                                        alt="GTV 3"></a></li>
+                                            <li class="Bangla" style="display: none;"><a id="myLink" onclick="view.location.href='play.php?stream=1107'"
+                                                                    class='channel flex-item'
+                                                                   "><img
+
+                                        src="assets/images/Independent%20TV1664976104.png"
+                                        alt="Independent TV"></a></li>
+                                            <li class="Bangla" style="display: none;"><a id="myLink" onclick="view.location.href='play.php?stream=1408'"
+                                                                    class='channel flex-item'
+                                                                   "><img
+
+                                        src="assets/images/Jalsha%20Movies1664976818.png"
+                                        alt="Jalsha Movies"></a></li>
+                                            <li class="Bangla" style="display: none;"><a id="myLink" onclick="view.location.href='play.php?stream=1106'"
+                                                                    class='channel flex-item'
+                                                                   "><img
+
+                                        src="assets/images/Jamuna%20Tv1664825738.png"
+                                        alt="Jamuna Tv"></a></li>
+                                            <li class="Others" style="display: none;"><a id="myLink" onclick="view.location.href='play.php?stream=1202'"
+                                                                    class='channel flex-item'
+                                                                   "><img
+
+                                        src="assets/images/Madani1664977182.png"
+                                        alt="Madani"></a></li>
+                                            <li class="Bangla" style="display: none;"><a id="myLink" onclick="view.location.href='play.php?stream=1122'"
+                                                                    class='channel flex-item'
+                                                                   "><img
+
+                                        src="assets/images/Masranga1667751530.png"
+                                        alt="Masranga"></a></li>
+                                            <li class="Hindi" style="display: none;"><a id="myLink" onclick="view.location.href='play.php?stream=1609'"
+                                                                    class='channel flex-item'
+                                                                   "><img
+
+                                        src="assets/images/MN%20Plus1664974912.png"
+                                        alt="MN Plus"></a></li>
+                                            <li class="Others" style="display: none;"><a id="myLink" onclick="view.location.href='play.php?stream=1606'"
+                                                                    class='channel flex-item'
+                                                                   "><img
+
+                                        src="assets/images/MNX1664975330.png"
+                                        alt="MNX"></a></li>
+                                            <li class="Bangla" style="display: none;"><a id="myLink" onclick="view.location.href='play.php?stream=1123'"
+                                                                    class='channel flex-item'
+                                                                   "><img
+
+                                        src="assets/images/Mohona%20Tv1664825859.png"
+                                        alt="Mohona Tv"></a></li>
+                                            <li class="Hindi" style="display: none;"><a id="myLink" onclick="view.location.href='play.php?stream=1604'"
+                                                                    class='channel flex-item'
+                                                                   "><img
+
+                                        src="assets/images/Movies%20Now1664974752.png"
+                                        alt="Movies Now"></a></li>
+                                            <li class="Bangla" style="display: none;"><a id="myLink" onclick="view.location.href='play.php?stream=1132'"
+                                                                    class='channel flex-item'
+                                                                   "><img
+
+                                        src="assets/images/My%20Tv1664826055.png"
+                                        alt="My Tv"></a></li>
+                                            <li class="Bangla" style="display: none;"><a id="myLink" onclick="view.location.href='play.php?stream=1113'"
+                                                                    class='channel flex-item'
+                                                                   "><img
+
+                                        src="assets/images/Nagorik1680260468.png"
+                                        alt="Nagorik"></a></li>
+                                            <li class="Others" style="display: none;"><a id="myLink" onclick="view.location.href='play.php?stream=1910'"
+                                                                    class='channel flex-item'
+                                                                   "><img
+
+                                        src="assets/images/National%20Geography1664975151.png"
+                                        alt="National Geography"></a></li>
+                                            <li class="Bangla" style="display: none;"><a id="myLink" onclick="view.location.href='play.php?stream=1112'"
+                                                                    class='channel flex-item'
+                                                                   "><img
+
+                                        src="assets/images/News%20241664826177.png"
+                                        alt="News 24"></a></li>
+                                            <li class="Kids" style="display: none;"><a id="myLink" onclick="view.location.href='play.php?stream=1305'"
+                                                                    class='channel flex-item'
+                                                                   "><img
+
+                                        src="assets/images/Nick%20HD1664976992.png"
+                                        alt="Nick HD"></a></li>
+                                            <li class="Bangla" style="display: none;"><a id="myLink" onclick="view.location.href='play.php?stream=1135'"
+                                                                    class='channel flex-item'
+                                                                   "><img
+
+                                        src="assets/images/Ntv1664826430.png"
+                                        alt="Ntv"></a></li>
+                                            <li class="Sports" "><a id="myLink" onclick="view.location.href='play.php?stream=1024'"
+                                                                    class='channel flex-item'
+                                                                   "><img
+
+                                        src="assets/images/Ondemand%20Sports1686832747.png"
+                                        alt="Ondemand Sports"></a></li>
+                                            <li class="Others" style="display: none;"><a id="myLink" onclick="view.location.href='play.php?stream=1203'"
+                                                                    class='channel flex-item'
+                                                                   "><img
+
+                                        src="assets/images/QRN%20TV1664977301.png"
+                                        alt="QRN TV"></a></li>
+                                            <li class="Sports" "><a id="myLink" onclick="view.location.href='play.php?stream=1023'"
+                                                                    class='channel flex-item'
+                                                                   "><img
+
+                                        src="assets/images/RedBull%20TV1667750027.png"
+                                        alt="RedBull TV"></a></li>
+                                            <li class="Others" style="display: none;"><a id="myLink" onclick="view.location.href='play.php?stream=1405'"
+                                                                    class='channel flex-item'
+                                                                   "><img
+
+                                        src="assets/images/Romedy%20Now1689427170.png"
+                                        alt="Romedy Now"></a></li>
+                                            <li class="Bangla" style="display: none;"><a id="myLink" onclick="view.location.href='play.php?stream=1128'"
+                                                                    class='channel flex-item'
+                                                                   "><img
+
+                                        src="assets/images/Rtv1664826487.png"
+                                        alt="Rtv"></a></li>
+                                            <li class="Bangla" style="display: none;"><a id="myLink" onclick="view.location.href='play.php?stream=1133'"
+                                                                    class='channel flex-item'
+                                                                   "><img
+
+                                        src="assets/images/SA%20Tv1664826606.png"
+                                        alt="SA Tv"></a></li>
+                                            <li class="Sports" "><a id="myLink" onclick="view.location.href='play.php?stream=1022'"
+                                                                    class='channel flex-item'
+                                                                   "><img
+
+                                        src="assets/images/SkyNET%20Sports%2021667751051.png"
+                                        alt="SkyNET Sports 2"></a></li>
+                                            <li class="Bangla" style="display: none;"><a id="myLink" onclick="view.location.href='play.php?stream=1111'"
+                                                                    class='channel flex-item'
+                                                                   "><img
+
+                                        src="assets/images/SomoyTV1689411430.png"
+                                        alt="SomoyTV"></a></li>
+                                            <li class="Bangla" style="display: none;"><a id="myLink" onclick="view.location.href='play.php?stream=1409'"
+                                                                    class='channel flex-item'
+                                                                   "><img
+
+                                        src="assets/images/Sony%20Aath1667728032.png"
+                                        alt="Sony Aath"></a></li>
+                                            <li class="Hindi" style="display: none;"><a id="myLink" onclick="view.location.href='play.php?stream=1703'"
+                                                                    class='channel flex-item'
+                                                                   "><img
+
+                                        src="assets/images/Sony%20Entertainment1667728144.png"
+                                        alt="Sony Entertainment"></a></li>
+                                            <li class="Hindi" style="display: none;"><a id="myLink" onclick="view.location.href='play.php?stream=1607'"
+                                                                    class='channel flex-item'
+                                                                   "><img
+
+                                        src="assets/images/Sony%20Max%20HD1667728133.png"
+                                        alt="Sony Max HD"></a></li>
+                                            <li class="Hindi" style="display: none;"><a id="myLink" onclick="view.location.href='play.php?stream=1603'"
+                                                                    class='channel flex-item'
+                                                                   "><img
+
+                                        src="assets/images/Sony%20Pix%20HD1667728093.png"
+                                        alt="Sony Pix HD"></a></li>
+                                            <li class="Hindi" style="display: none;"><a id="myLink" onclick="view.location.href='play.php?stream=1701'"
+                                                                    class='channel flex-item'
+                                                                   "><img
+
+                                        src="assets/images/Sony%20SAB1681564997.png"
+                                        alt="Sony SAB"></a></li>
+                                            <li class="Sports" "><a id="myLink" onclick="view.location.href='play.php?stream=1021'"
+                                                                    class='channel flex-item'
+                                                                   "><img
+
+                                        src="assets/images/Sony%20TEN%2011667728321.png"
+                                        alt="Sony TEN 1"></a></li>
+                                            <li class="Sports" "><a id="myLink" onclick="view.location.href='play.php?stream=1020'"
+                                                                    class='channel flex-item'
+                                                                   "><img
+
+                                        src="assets/images/Sony%20TEN%2021667728105.png"
+                                        alt="Sony TEN 2"></a></li>
+                                            <li class="Sports" "><a id="myLink" onclick="view.location.href='play.php?stream=1012'"
+                                                                    class='channel flex-item'
+                                                                   "><img
+
+                                        src="assets/images/Sony%20TEN%2031667728117.png"
+                                        alt="Sony TEN 3"></a></li>
+                                            <li class="Sports" "><a id="myLink" onclick="view.location.href='play.php?stream=1015'"
+                                                                    class='channel flex-item'
+                                                                   "><img
+
+                                        src="assets/images/Sony%20TEN%2051667728306.png"
+                                        alt="Sony TEN 5"></a></li>
+                                            <li class="Hindi" style="display: none;"><a id="myLink" onclick="view.location.href='play.php?stream=1708'"
+                                                                    class='channel flex-item'
+                                                                   "><img
+
+                                        src="assets/images/Star%20Bharat1664864810.png"
+                                        alt="Star Bharat"></a></li>
+                                            <li class="Hindi" style="display: none;"><a id="myLink" onclick="view.location.href='play.php?stream=1601'"
+                                                                    class='channel flex-item'
+                                                                   "><img
+
+                                        src="assets/images/Star%20Gold1667751269.png"
+                                        alt="Star Gold"></a></li>
+                                            <li class="Bangla" style="display: none;"><a id="myLink" onclick="view.location.href='play.php?stream=1406'"
+                                                                    class='channel flex-item'
+                                                                   "><img
+
+                                        src="assets/images/Star%20Jalsha1664976894.png"
+                                        alt="Star Jalsha"></a></li>
+                                            <li class="Hindi" style="display: none;"><a id="myLink" onclick="view.location.href='play.php?stream=1605'"
+                                                                    class='channel flex-item'
+                                                                   "><img
+
+                                        src="assets/images/Star%20Movies1667751377.png"
+                                        alt="Star Movies"></a></li>
+                                            <li class="Hindi" style="display: none;"><a id="myLink" onclick="view.location.href='play.php?stream=1709'"
+                                                                    class='channel flex-item'
+                                                                   "><img
+
+                                        src="assets/images/Star%20Plus1667751169.png"
+                                        alt="Star Plus"></a></li>
+                                            <li class="Sports" "><a id="myLink" onclick="view.location.href='play.php?stream=1005'"
+                                                                    class='channel flex-item'
+                                                                   "><img
+
+                                        src="assets/images/Star%20Sports%2011667750523.png"
+                                        alt="Star Sports 1"></a></li>
+                                            <li class="Sports" "><a id="myLink" onclick="view.location.href='play.php?stream=1025'"
+                                                                    class='channel flex-item'
+                                                                   "><img
+
+                                        src="assets/images/Star%20Sports%2021667750538.png"
+                                        alt="Star Sports 2"></a></li>
+                                            <li class="Sports" "><a id="myLink" onclick="view.location.href='play.php?stream=1013'"
+                                                                    class='channel flex-item'
+                                                                   "><img
+
+                                        src="assets/images/Star%20Sports%2031667750508.png"
+                                        alt="Star Sports 3"></a></li>
+                                            <li class="Sports" "><a id="myLink" onclick="view.location.href='play.php?stream=1017'"
+                                                                    class='channel flex-item'
+                                                                   "><img
+
+                                        src="assets/images/Star%20Sports%20Select%2021667750897.png"
+                                        alt="Star Sports Select 2"></a></li>
+                                            <li class="Sports" "><a id="myLink" onclick="view.location.href='play.php?stream=1004'"
+                                                                    class='channel flex-item'
+                                                                   "><img
+
+                                        src="assets/images/StarSports%20Select%20HD1667750883.png"
+                                        alt="StarSports Select HD"></a></li>
+                                            <li class="Bangla" style="display: none;"><a id="myLink" onclick="view.location.href='play.php?stream=1403'"
+                                                                    class='channel flex-item'
+                                                                   "><img
+
+                                        src="assets/images/Sun%20Bangla1664976074.png"
+                                        alt="Sun Bangla"></a></li>
+                                            <li class="Others" style="display: none;"><a id="myLink" onclick="view.location.href='play.php?stream=1903'"
+                                                                    class='channel flex-item'
+                                                                   "><img
+
+                                        src="assets/images/Travel%20XP1664976451.png"
+                                        alt="Travel XP"></a></li>
+                                            <li class="Sports" "><a id="myLink" onclick="view.location.href='play.php?stream=1101'"
+                                                                    class='channel flex-item'
+                                                                   "><img
+
+                                        src="assets/images/TSports%2021668953490.png"
+                                        alt="TSports 2"></a></li>
+                                            <li class="Bangla" style="display: none;"><a id="myLink" onclick="view.location.href='play.php?stream=1401'"
+                                                                    class='channel flex-item'
+                                                                   "><img
+
+                                        src="assets/images/Zee%20Bangla%20Cinema1664976800.png"
+                                        alt="Zee Bangla Cinema"></a></li>
+                                            <li class="Hindi" style="display: none;"><a id="myLink" onclick="view.location.href='play.php?stream=1611'"
+                                                                    class='channel flex-item'
+                                                                   "><img
+
+                                        src="assets/images/Zee%20Cinema%20HD1664974056.png"
+                                        alt="Zee Cinema HD"></a></li>
+                                            <li class="Bangla" style="display: none;"><a id="myLink" onclick="view.location.href='play.php?stream=1706'"
+                                                                    class='channel flex-item'
+                                                                   "><img
+
+                                        src="assets/images/Zee%20Tv1664865395.png"
+                                        alt="Zee Tv"></a></li>
+                                            <li class="Hindi" style="display: none;"><a id="myLink" onclick="view.location.href='play.php?stream=1706'"
+                                                                    class='channel flex-item'
+                                                                   "><img
+
+                                        src="assets/images/Zee%20Tv1664974411.png"
+                                        alt="Zee Tv"></a></li>
+                                        
+                                        <li class="Bangla" style="display: none;"><a id="myLink" onclick="view.location.href='play.php?stream=1405'"
+                                                                    class='channel flex-item'
+                                                                   "><img
+
+                                        src="assets/images/Zee_bangla.png"
+                                        alt="ZEE-Bangla"></a></li>
+                                        
+                                          <li class="Bangla" style="display: none;"><a id="myLink" onclick="view.location.href='play.php?stream=1115'"
+                                                                    class='channel flex-item'
+                                                                   "><img
+
+                                        src="assets/images/ekontv .jpg"
+                                        alt="Ekon TV"></a></li>
+                                        
+                                        
+                                        
+                                        
+                                          <!--Only HD Channel -->
+										
+										
+										 <li class="HD" style="display: none;"><a id="myLink" onclick="view.location.href='play.php?stream=2001'"
+                                                                    class='channel flex-item'
+                                                                   "><img
+
+                                        src="assets/images/Star%20Jalsha1664976894.png"
+                                        alt="Star Jalsha"></a></li>
+										
+										
+										 <li class="HD" style="display: none;"><a id="myLink" onclick="view.location.href='play.php?stream=2000'"
+                                                                    class='channel flex-item'
+                                                                   "><img
+
+                                        src="assets/images/Zee_bangla.png"
+                                        alt="ZEE-Bangla"></a></li>
+										
+										 <li class="HD" style="display: none;"><a id="myLink" onclick="view.location.href='play.php?stream=2011'"
+                                                                    class='channel flex-item'
+                                                                   "><img
+
+                                        src="assets/images/Star%20Plus1667751169.png"
+                                        alt="Star Plus"></a></li>
+										
+										
+										<li class="HD" style="display: none;"><a id="myLink" onclick="view.location.href='play.php?stream=2012'"
+                                                                    class='channel flex-item'
+                                                                   "><img
+
+                                        src="assets/images/Star%20Bharat1664864810.png"
+                                        alt="Star Bharat"></a></li>
+                                        
+                                        
+                                        </div>
+                </ul>
+
+            </div>
         </div>
-        <div class="channels-container">
-            <div class="channels">
-                <!-- Dynamic PHP Channel Generation -->
-                <div class="channel" data-url="https://edge01.iptv.digijadoo.net/live/t_sports/chunks.m3u8?expires=1721348851&md5=2dCEZE9ktOGRqXG7QyenMw&user=d477246e9e724f81a011b847457e71c4"><img src="https://www.newswire.lk/wp-content/uploads/2022/10/Screenshot_20221021-173923_Samsung-Internet.jpg" alt="LPL T20"><p>LPL T20</p></div><div class="channel" data-url="https://yupptvcatchupire.yuppcdn.net/preview/starjalsha/1800.m3u8?hdnts="><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Star_Jalsha_logo_2023.png/528px-Star_Jalsha_logo_2023.png" alt="STAR JALSHA"><p>STAR JALSHA</p></div><div class="channel" data-url="https://edge01.iptv.digijadoo.net/live/zee_bangla/playlist.m3u8?md5=JDKN6CS2SwRfUBDAyz5Tbw&expires=1721094655&user=d477246e9e724f81a011b847457e71c4"><img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Zee_Bangla_logo.png" alt="ZEE BANGLA"><p>ZEE BANGLA</p></div><div class="channel" data-url="https://yupptvcatchupire.yuppcdn.net/preview/colorsbanglahd/800.m3u8"><img src="https://static.wikia.nocookie.net/etv-gspn-bangla/images/5/5a/Colors_Bangla_HD_with_tagline_%282016%29.png" alt="COLORS BANGLA"><p>COLORS BANGLA</p></div><div class="channel" data-url="https://live-bangla.akamaized.net/liveabr/pub-iobanglakp3sff/live_240p/chunks.m3u8"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/e/ea/Enterr10_Bangla.jpeg/200px-Enterr10_Bangla.jpeg" alt="ENTER10 BANGLA"><p>ENTER10 BANGLA</p></div><div class="channel" data-url="https://live-bangla.akamaized.net/liveabr/pub-iobanglakp3sff/live_720p/chunks.m3u8"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/e/ea/Enterr10_Bangla.jpeg/200px-Enterr10_Bangla.jpeg" alt="ENTER10 BANGLA 2"><p>ENTER10 BANGLA 2</p></div><div class="channel" data-url="https://d75dqofg5kmfk.cloudfront.net/bpk-tv/Sangeetbangla/default/sangeetbangla-audio_208482_und=208000-video=2137600.m3u8"><img src="https://www.adgully.com/img/400/201904/sangeet-bangla.jpg" alt="SONGEET BANGLA"><p>SONGEET BANGLA</p></div><div class="channel" data-url="https://abplivetv.akamaized.net/hls/live/2043012/ananda/master_720p.m3u8"><img src="https://i.postimg.cc/t7Gn9VtZ/abpananda.png" alt="ABP Ananda"><p>ABP Ananda</p></div><div class="channel" data-url="https://amg01448-samsungin-abpananda-samsungin-ad-pw.amagi.tv/playlist/amg01448-samsungin-abpananda-samsungin/playlist.m3u8"><img src="https://i.postimg.cc/t7Gn9VtZ/abpananda.png" alt="ABP Ananda [SamsungTVPlus]"><p>ABP Ananda [SamsungTVPlus]</p></div><div class="channel" data-url="http://banglajagotv.livebox.co.in:80/banglajagohls/24x7.m3u8"><img src="https://i.postimg.cc/Qt9GZjgw/image.png" alt="Bangla Jago TV"><p>Bangla Jago TV</p></div><div class="channel" data-url="https://amg01448-samsungin-enterr10bangla-samsungin-ad-gg.amagi.tv/playlist/amg01448-samsungin-enterr10bangla-samsungin/playlist.m3u8"><img src="https://i.postimg.cc/85GwNPPw/Enterr10-Bangla.jpg" alt="Enterr10 Bangla [SamsungTVPlus]"><p>Enterr10 Bangla [SamsungTVPlus]</p></div><div class="channel" data-url="https://cdn-uw2-prod.tsv2.amagi.tv/linear/amg00864-shemarooenterta-shemabollywood-ono/playlist.m3u8"><img src="https://i.postimg.cc/CLPr6gq6/IMG-20220828-165715.jpg" alt="Shema Bollywood"><p>Shema Bollywood</p></div><div class="channel" data-url="https://feeds.intoday.in/aajtak/api/aajtakhd/master.m3u8"><img src="https://upload.wikimedia.org/wikipedia/commons/2/28/Aaj_tak_logo.png" alt="Aaj Tak"><p>Aaj Tak</p></div>            </div>
-        </div>
+
     </div>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const player = new Clappr.Player({
-                source: 'https://edge01.iptv.digijadoo.net/live/gaan_bangla/playlist.m3u8?md5=bOCOULCeCzWkN-WC-VPH2Q&expires=1721094417&user=d477246e9e724f81a011b847457e71c4',
-                parentId: '#player',
-                width: '100%',
-                height: '100%',
-            });
+</div>
 
-            const channels = document.querySelectorAll(".channel");
 
-            channels.forEach(channel => {
-                channel.addEventListener("click", function () {
-                    const channelUrl = this.getAttribute("data-url");
-                    player.load(channelUrl);
-                });
-            });
-        });
-    </script>
-</body>
 
-</html><div id="sfcp7xlxctdu7a4fdrwlwgrnzkuytx1hckl"></div>
-<script type="text/javascript" src="https://counter8.optistats.ovh/private/counter.js?c=p7xlxctdu7a4fdrwlwgrnzkuytx1hckl&down=async" async></script>
-<br><noscript><a href="https://www.freecounterstat.com" title="free hit counter code"><img src="https://counter8.optistats.ovh/private/freecounterstat.php?c=p7xlxctdu7a4fdrwlwgrnzkuytx1hckl" border="0" title="free hit counter code" alt="free hit counter code"></a></noscript> 
+<p class="notice">We do not host any files on its servers. All files or contents hosted on third-party websites. We will not accept responsibility for content hosted on third-party websites. We just index those links which are already available on the internet.</p>
+
+    <!-- Latest compiled JavaScript -->
+
+<script src="js/jquery.min.js"></script>
+
+<script src="js/scripts2aec.js?v=40"></script>
+
+</body> 
